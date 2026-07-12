@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | Polytechnic Hub</title>
+
+    <meta name="description"
+          content="Secure Admin Login Panel - Polytechnic Hub">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <main id="admin-login-page">
+
+        <!-- Login Header -->
+
+        <section class="login-header">
+
+            <div class="container">
+
+                <img src="../../assets/logo/logo.png"
+                     alt="Polytechnic Hub Logo"
+                     class="login-logo">
+
+                <h1>
+
+                    Admin Login
+
+                </h1>
+
+                <p>
+
+                    Authorized Administrators Only
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Login Form -->
+
+        <section class="login-section">
+
+            <div class="container">
+
+                <form id="adminLoginForm">
+
+                    <div class="form-group">
+
+                        <label for="adminMobile">
+
+                            Mobile Number
+
+                        </label>
+
+                        <input type="tel"
+                               id="adminMobile"
+                               name="adminMobile"
+                               placeholder="Enter Mobile Number"
+                               required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="adminEmail">
+
+                            Email Address
+
+                        </label>
+
+                        <input type="email"
+                               id="adminEmail"
+                               name="adminEmail"
+                               placeholder="Enter Email Address"
+                               required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="adminPassword">
+
+                            Password
+
+                        </label>
+
+                        <input type="password"
+                               id="adminPassword"
+                               name="adminPassword"
+                               placeholder="Enter Password"
+                               required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            <input type="checkbox"
+                                   id="rememberAdmin">
+
+                            Remember Me
+
+                        </label>
+
+                    </div>
+
+                    <button type="submit"
+                            id="adminLoginButton">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../../js/admin-auth.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
