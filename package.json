@@ -1,0 +1,41 @@
+{
+  "name": "polytechnic-hub",
+  "version": "1.0.0",
+  "description": "Polytechnic Hub - Learn • Practice • Succeed",
+  "author": "Lalan Kumar",
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://polytechnichub.netlify.app",
+  "keywords": [
+    "polytechnic",
+    "education",
+    "pwa",
+    "html",
+    "css",
+    "javascript",
+    "supabase",
+    "netlify"
+  ],
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve .",
+    "build": "echo \"Static website - no build required\"",
+    "preview": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/Polytechnic-Hub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/Polytechnic-Hub/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
