@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Polytechnic Hub is the premier enterprise-grade learning platform custom-designed for SBTE Bihar Polytechnic students. Access hand-written notes, syllabus-aligned courses, PYQs, and interactive mock tests.">
+    <meta name="keywords" content="SBTE Bihar, Bihar Polytechnic, Polytechnic Notes, PYQ, Mock Tests, Civil Engineering, Mechanical Engineering, Electrical Engineering, CS Engineering, Polytechnic Syllabus">
+    <meta name="author" content="Polytechnic Hub Enterprise">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://polytechnichub.ac.in/">
+    <meta property="og:title" content="Polytechnic Hub - Best Learning Platform for Bihar Polytechnic Students">
+    <meta property="og:description" content="Access SBTE Bihar notes, courses, PYQs, and test series in one centralized enterprise PWA.">
+    <meta property="og:image" content="assets/images/og-banner.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://polytechnichub.ac.in/">
+    <meta property="twitter:title" content="Polytechnic Hub - Best Learning Platform for Bihar Polytechnic Students">
+    <meta property="twitter:description" content="Access SBTE Bihar notes, courses, PYQs, and test series in one centralized enterprise PWA.">
+    <meta property="twitter:image" content="assets/images/og-banner.png">
+
+    <!-- PWA Settings -->
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PolyHub">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+
+    <title>Polytechnic Hub | SBTE Bihar Learning Platform</title>
+
+    <!-- CSS Loading Pipeline (Strict Order) -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+</head>
+<body class="loading">
+
+    <!-- Screen Reader Bypass Link -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- Enterprise UI Component Placeholders (Loaded via component-loader.js) -->
+    <div id="loader-placeholder"></div>
+    <div id="toast-placeholder" aria-live="polite" aria-atomic="true"></div>
+    <div id="popup-placeholder"></div>
+
+    <!-- Main Application Wrapper -->
+    <div class="app-container">
+        <!-- Sidebar Navigation (Responsive desktop and drawer layout) -->
+        <div id="sidebar-placeholder"></div>
+
+        <div class="content-wrapper">
+            <!-- Header (Search and Notification Triggers Built-in) -->
+            <div id="header-placeholder"></div>
+
+            <!-- Navbar Component Placeholder -->
+            <div id="navbar-placeholder"></div>
+
+            <!-- Breadcrumb Navigation Component Placeholder -->
+            <div id="breadcrumb-placeholder"></div>
+
+            <!-- Main Interactive Content Region -->
+            <main id="main-content" class="main-content-area" tabindex="-1">
+                
+                <!-- Premium Dynamic Hero Slider Region -->
+                <section class="hero-section" aria-label="Welcome and Navigation Slider">
+                    <div id="banner-slider-placeholder"></div>
+                    <div class="hero-content-fallback container">
+                        <div class="hero-grid">
+                            <div class="hero-text">
+                                <span class="badge badge-primary animated fadeIn">SBTE Bihar Syllabus Aligned</span>
+                                <h1 class="hero-title animated fadeInUp">Welcome to Polytechnic Hub</h1>
+                                <p class="hero-subtitle animated fadeInUp">Best Learning Platform for Bihar Polytechnic Students. Achieve Academic Excellence with curated Notes, Lectures, Practice Mock Tests, and Live Discussions.</p>
+                                <div class="hero-actions animated fadeInUp">
+                                    <a href="pages/auth/login.html" class="btn btn-primary btn-large" id="hero-login-btn">Login</a>
+                                    <a href="pages/auth/register.html" class="btn btn-outline btn-large" id="hero-register-btn">Register</a>
+                                    <a href="pages/courses/notes.html" class="btn btn-secondary btn-large" id="hero-notes-btn">Explore Notes</a>
+                                    <a href="pages/notice/list.html" class="btn btn-accent btn-large" id="hero-notice-btn">Latest Notice</a>
+                                </div>
+                            </div>
+                            <div class="hero-visual animated fadeInRight">
+                                <!-- Accessible High-Fidelity SVG Art illustrating Modern Web-Based Learning -->
+                                <svg class="hero-illustration" width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <rect width="500" height="400" rx="24" fill="var(--card-bg-fallback, #f8fafc)"/>
+                                    <circle cx="250" cy="200" r="120" fill="var(--primary-light, #e0e7ff)"/>
+                                    <rect x="140" y="110" width="220" height="180" rx="16" fill="var(--card-bg, #ffffff)" stroke="var(--primary-color, #4f46e5)" stroke-width="4" />
+                                    <!-- Inner Screen graphics -->
+                                    <rect x="160" y="130" width="180" height="90" rx="8" fill="#f1f5f9"/>
+                                    <path d="M190 175 L230 195 L310 155" stroke="var(--primary-color, #4f46e5)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="160" y="240" width="100" height="12" rx="4" fill="var(--primary-color, #4f46e5)"/>
+                                    <rect x="160" y="260" width="140" height="8" rx="4" fill="#cbd5e1"/>
+                                    <circle cx="320" cy="250" r="15" fill="var(--accent-color, #f59e0b)"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Core Features Section -->
+                <section class="section-container" id="features" aria-labelledby="features-heading">
+                    <div class="section-header text-center">
+                        <h2 id="features-heading" class="section-title">Academic Powerhouse</h2>
+                        <p class="section-subtitle">Everything an aspiring engineer needs to ace SBTE board examinations and campus placements.</p>
+                    </div>
+                    <div class="grid-layout cols-4 md-cols-2 sm-cols-1 gap-md">
+                        <!-- Study Materials Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-primary-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-primary"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            </div>
+                            <h3 class="card-title">Study Materials</h3>
+                            <p class="card-description">High-quality hand-written class notes and official textbook resources classified by branch and semester.</p>
+                        </div>
+
+                        <!-- PYQ Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-accent-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-accent"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                            </div>
+                            <h3 class="card-title">PYQ (Previous Years)</h3>
+                            <p class="card-description">SBTE Bihar Previous Year Question papers with detailed step-by-step master solutions.</p>
+                        </div>
+
+                        <!-- Free Courses Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-success-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-success"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+                            </div>
+                            <h3 class="card-title">Free Courses</h3>
+                            <p class="card-description">Completely free, high-yield introductory video courses taught by premium educators.</p>
+                        </div>
+
+                        <!-- Paid Courses Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-danger-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-danger"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            </div>
+                            <h3 class="card-title">Paid Courses</h3>
+                            <p class="card-description">Structured premium batches offering rigorous coverage, doubt resolutions, and interactive mentorship.</p>
+                        </div>
+
+                        <!-- Mock Tests Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-warning-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-warning"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            </div>
+                            <h3 class="card-title">Mock Tests</h3>
+                            <p class="card-description">Realistic mock examinations with instant diagnostic scorecards and performance statistics.</p>
+                        </div>
+
+                        <!-- Certificates Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-info-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-info"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <h3 class="card-title">Certificates</h3>
+                            <p class="card-description">Verify course achievements with verifiable shareable digital certificates for your resume.</p>
+                        </div>
+
+                        <!-- Downloads Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-primary-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-primary"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            </div>
+                            <h3 class="card-title">Offline Downloads</h3>
+                            <p class="card-description">Fully PWA offline-enabled downloads. Access resources offline in distant dynamic areas.</p>
+                        </div>
+
+                        <!-- Community Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-accent-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-accent"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <h3 class="card-title">Community</h3>
+                            <p class="card-description">Interact with students spanning over 40+ government & private polytechnic institutes across Bihar.</p>
+                        </div>
+
+                        <!-- Discussion Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-success-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-success"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                            <h3 class="card-title">Discussion Forums</h3>
+                            <p class="card-description">Clear queries with mentors and peers using rich, topic-specific discussion boards.</p>
+                        </div>
+
+                        <!-- Bookmarks Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-danger-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-danger"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                            <h3 class="card-title">Bookmarks</h3>
+                            <p class="card-description">Save complex solutions, equations, notices, and test solutions instantly to review later.</p>
+                        </div>
+
+                        <!-- Progress Tracking Feature Card -->
+                        <div class="card card-hover feature-card text-center">
+                            <div class="card-icon-wrapper bg-warning-light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-warning"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                            </div>
+                            <h3 class="card-title">Progress Tracking</h3>
+                            <p class="card-description">Intelligent student analytics demonstrating syllabus coverage, test progress, and predicted outcomes.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Platform Statistics Section -->
+                <section class="statistics-section" id="statistics" aria-labelledby="stats-heading">
+                    <div class="container">
+                        <h2 id="stats-heading" class="sr-only">Platform Statistics</h2>
+                        <div class="grid-layout cols-5 md-cols-3 sm-cols-2 gap-md text-center">
+                            <div class="stat-card">
+                                <div class="stat-number" id="stat-students">45K+</div>
+                                <div class="stat-label">Active Students</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" id="stat-notes">12K+</div>
+                                <div class="stat-label">Verified Notes</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" id="stat-courses">150+</div>
+                                <div class="stat-label">Syllabus Courses</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" id="stat-tests">850+</div>
+                                <div class="stat-label">Mock Tests Completed</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" id="stat-announcements">3.2K+</div>
+                                <div class="stat-label">SBTE Board Notices</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Latest Notice Preview Section -->
+                <section class="section-container" id="latest-notices" aria-labelledby="notices-heading">
+                    <div class="section-header flex-row justify-between align-center">
+                        <div>
+                            <h2 id="notices-heading" class="section-title">Latest SBTE Bihar Notices</h2>
+                            <p class="section-subtitle">Stay updated with instant push-notifications on official announcements.</p>
+                        </div>
+                        <a href="pages/notice/list.html" class="btn btn-outline btn-sm">View All Notices</a>
+                    </div>
+                    <div class="grid-layout cols-3 md-cols-2 sm-cols-1 gap-md">
+                        <!-- Notice Card 1 -->
+                        <div class="card notice-card">
+                            <div class="notice-meta">
+                                <span class="badge badge-accent">SBTE Official</span>
+                                <time datetime="2026-07-10">July 10, 2026</time>
+                            </div>
+                            <h3 class="notice-title"><a href="pages/notice/detail.html?id=sbte-001">Bihar SBTE Even Semester (2nd, 4th, 6th) Examination Date Sheet Released</a></h3>
+                            <p class="notice-excerpt">The State Board of Technical Education, Bihar has published the official theoretical and practical dates for the forthcoming even semesters examinations...</p>
+                            <a href="pages/notice/detail.html?id=sbte-001" class="notice-link">Read full notice &rarr;</a>
+                        </div>
+                        <!-- Notice Card 2 -->
+                        <div class="card notice-card">
+                            <div class="notice-meta">
+                                <span class="badge badge-primary">Admissions</span>
+                                <time datetime="2026-07-08">July 08, 2026</time>
+                            </div>
+                            <h3 class="notice-title"><a href="pages/notice/detail.html?id=sbte-002">DCECE Polytechnic Entrance Counselling & Online Choice Filling Process</a></h3>
+                            <p class="notice-excerpt">Comprehensive instructions for eligible DCECE merit holders seeking admission to structural branches across government polytechnic institutions...</p>
+                            <a href="pages/notice/detail.html?id=sbte-002" class="notice-link">Read full notice &rarr;</a>
+                        </div>
+                        <!-- Notice Card 3 -->
+                        <div class="card notice-card">
+                            <div class="notice-meta">
+                                <span class="badge badge-info">Registration</span>
+                                <time datetime="2026-07-05">July 05, 2026</time>
+                            </div>
+                            <h3 class="notice-title"><a href="pages/notice/detail.html?id=sbte-003">Important Notice regarding Online Registration for Batch 2025-26</a></h3>
+                            <p class="notice-excerpt">Last date extension for filling online registration details through EMS portal without dynamic late charges. Ensure all identity items are verified...</p>
+                            <a href="pages/notice/detail.html?id=sbte-003" class="notice-link">Read full notice &rarr;</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Top Courses Preview -->
+                <section class="section-container bg-offset" id="top-courses" aria-labelledby="courses-heading">
+                    <div class="container">
+                        <div class="section-header flex-row justify-between align-center">
+                            <div>
+                                <h2 id="courses-heading" class="section-title">Top Academic Courses</h2>
+                                <p class="section-subtitle">Enlist in branches led by premium veteran engineering faculties.</p>
+                            </div>
+                            <a href="pages/courses/list.html" class="btn btn-outline btn-sm">Explore Courses</a>
+                        </div>
+                        <div class="grid-layout cols-3 md-cols-2 sm-cols-1 gap-md" id="course-cards-container">
+                            <!-- Course Card 1 -->
+                            <article class="card course-card card-hover">
+                                <div class="course-badge">Civil Engineering</div>
+                                <div class="course-card-content">
+                                    <h3 class="course-card-title"><a href="pages/courses/detail.html?id=civil-structural">Structural Mechanics Masterclass (3rd Sem)</a></h3>
+                                    <p class="course-instructor">By Prof. Ramesh Kumar (Ex-NIT Patna)</p>
+                                    <div class="course-metadata">
+                                        <span>45 Lectures</span>
+                                        <span>320+ PDF Notes</span>
+                                    </div>
+                                    <div class="course-pricing">
+                                        <span class="price-free">FREE</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Course Card 2 -->
+                            <article class="card course-card card-hover">
+                                <div class="course-badge">Electrical Engineering</div>
+                                <div class="course-card-content">
+                                    <h3 class="course-card-title"><a href="pages/courses/detail.html?id=electrical-machines">AC & DC Rotating Electrical Machines (4th Sem)</a></h3>
+                                    <p class="course-instructor">By Dr. Amit Kumar Pathak</p>
+                                    <div class="course-metadata">
+                                        <span>60 Lectures</span>
+                                        <span>15 Practice Sets</span>
+                                    </div>
+                                    <div class="course-pricing">
+                                        <span class="price-discount">₹499</span>
+                                        <span class="price-original">₹1,999</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Course Card 3 -->
+                            <article class="card course-card card-hover">
+                                <div class="course-badge">Computer Science</div>
+                                <div class="course-card-content">
+                                    <h3 class="course-card-title"><a href="pages/courses/detail.html?id=cs-dsa">Data Structures & Algorithms inside C (3rd Sem)</a></h3>
+                                    <p class="course-instructor">By Prof. Shalini Kumari (M.Tech, IIT-B)</p>
+                                    <div class="course-metadata">
+                                        <span>52 Lectures</span>
+                                        <span>12 Code Repositories</span>
+                                    </div>
+                                    <div class="course-pricing">
+                                        <span class="price-free">FREE</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Latest Study Material Preview -->
+                <section class="section-container" id="study-materials" aria-labelledby="materials-heading">
+                    <div class="section-header flex-row justify-between align-center">
+                        <div>
+                            <h2 id="materials-heading" class="section-title">New Study Materials</h2>
+                            <p class="section-subtitle">Downloaded by thousands of top students across state polytechnics.</p>
+                        </div>
+                        <a href="pages/study/materials.html" class="btn btn-outline btn-sm">Explore All Materials</a>
+                    </div>
+                    <div class="grid-layout cols-4 md-cols-2 sm-cols-1 gap-md">
+                        <!-- Study Card 1 -->
+                        <div class="card material-card flex-col">
+                            <span class="material-type-badge pdf">PDF</span>
+                            <h3 class="material-title">Applied Chemistry Detailed Lab Manual - Group A & B</h3>
+                            <p class="material-meta">For All First Year Students</p>
+                            <div class="material-stats">
+                                <span>12.4K Downloads</span>
+                                <span>3.2 MB</span>
+                            </div>
+                            <a href="pages/study/download.html?id=applied-chem" class="btn btn-primary btn-sm btn-full margin-top-auto">Download Now</a>
+                        </div>
+                        <!-- Study Card 2 -->
+                        <div class="card material-card flex-col">
+                            <span class="material-type-badge solution">Solved Paper</span>
+                            <h3 class="material-title">Mechanical Thermal Engineering 2025 Board Solved Paper</h3>
+                            <p class="material-meta">5th Sem Mechanical</p>
+                            <div class="material-stats">
+                                <span>8.9K Downloads</span>
+                                <span>5.1 MB</span>
+                            </div>
+                            <a href="pages/study/download.html?id=thermal-eng-sol" class="btn btn-primary btn-sm btn-full margin-top-auto">Download Now</a>
+                        </div>
+                        <!-- Study Card 3 -->
+                        <div class="card material-card flex-col">
+                            <span class="material-type-badge note">Handwritten</span>
+                            <h3 class="material-title">Microprocessors & Microcontrollers Smart Handwritten Notes</h3>
+                            <p class="material-meta">5th Sem CS & Electronics</p>
+                            <div class="material-stats">
+                                <span>15.2K Downloads</span>
+                                <span>14 MB</span>
+                            </div>
+                            <a href="pages/study/download.html?id=micro-notes" class="btn btn-primary btn-sm btn-full margin-top-auto">Download Now</a>
+                        </div>
+                        <!-- Study Card 4 -->
+                        <div class="card material-card flex-col">
+                            <span class="material-type-badge pdf">PDF</span>
+                            <h3 class="material-title">Estimating & Costing Standard SBTE Reference Formulas</h3>
+                            <p class="material-meta">6th Sem Civil Engineering</p>
+                            <div class="material-stats">
+                                <span>10.1K Downloads</span>
+                                <span>2.8 MB</span>
+                            </div>
+                            <a href="pages/study/download.html?id=estimating-cost" class="btn btn-primary btn-sm btn-full margin-top-auto">Download Now</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Popular Tests Preview -->
+                <section class="section-container bg-offset" id="popular-tests" aria-labelledby="tests-heading">
+                    <div class="container">
+                        <div class="section-header flex-row justify-between align-center">
+                            <div>
+                                <h2 id="tests-heading" class="section-title">Popular Practice Tests</h2>
+                                <p class="section-subtitle">Real-time performance testing against state-wide competition.</p>
+                            </div>
+                            <a href="pages/tests/list.html" class="btn btn-outline btn-sm">All Mock Tests</a>
+                        </div>
+                        <div class="grid-layout cols-3 md-cols-2 sm-cols-1 gap-md">
+                            <!-- Test Card 1 -->
+                            <div class="card test-card flex-col justify-between">
+                                <div>
+                                    <span class="badge badge-success">Active</span>
+                                    <h3 class="test-title">Applied Mathematics-I Comprehensive Mock Series</h3>
+                                    <p class="test-details">40 Questions • 60 Minutes • Basic Science Group</p>
+                                </div>
+                                <div class="test-action-row flex-row justify-between align-center">
+                                    <span class="test-participants">4.3K+ Attempts</span>
+                                    <a href="pages/tests/detail.html?id=math-i" class="btn btn-secondary btn-sm">Start Test</a>
+                                </div>
+                            </div>
+                            <!-- Test Card 2 -->
+                            <div class="card test-card flex-col justify-between">
+                                <div>
+                                    <span class="badge badge-success">Active</span>
+                                    <h3 class="test-title">Digital Electronics Unitwise Conceptual Practice Test</h3>
+                                    <p class="test-details">30 Questions • 45 Minutes • Electrical & ECE</p>
+                                </div>
+                                <div class="test-action-row flex-row justify-between align-center">
+                                    <span class="test-participants">2.8K+ Attempts</span>
+                                    <a href="pages/tests/detail.html?id=digital-elec" class="btn btn-secondary btn-sm">Start Test</a>
+                                </div>
+                            </div>
+                            <!-- Test Card 3 -->
+                            <div class="card test-card flex-col justify-between">
+                                <div>
+                                    <span class="badge badge-accent">SBTE Exam Mock</span>
+                                    <h3 class="test-title">Basic Surveying Complete Mock Exam Series</h3>
+                                    <p class="test-details">70 Questions • 180 Minutes • Civil Engineering 3rd Sem</p>
+                                </div>
+                                <div class="test-action-row flex-row justify-between align-center">
+                                    <span class="test-participants">5.2K+ Attempts</span>
+                                    <a href="pages/tests/detail.html?id=surveying" class="btn btn-secondary btn-sm">Start Test</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- High Fidelity Testimonials Section -->
+                <section class="section-container" id="testimonials" aria-labelledby="testimonials-heading">
+                    <div class="section-header text-center">
+                        <h2 id="testimonials-heading" class="section-title">What Our Toppers Say</h2>
+                        <p class="section-subtitle">Real feedback from Bihar Polytechnic toppers who secured placements using PolyHub.</p>
+                    </div>
+                    <div class="grid-layout cols-3 md-cols-1 gap-md">
+                        <blockquote class="card testimonial-card">
+                            <p class="testimonial-text">"Polytechnic Hub was my constant guide. The structural notes and exam solved papers prepared by experienced faculties helped me secure an aggregate 91% in my SBTE Civil exams."</p>
+                            <footer class="testimonial-author">
+                                <cite class="author-name">Anand Vardhan</cite>
+                                <span class="author-info">Rank 1, GP Patna-7 (Civil Eng.)</span>
+                            </footer>
+                        </blockquote>
+                        <blockquote class="card testimonial-card">
+                            <p class="testimonial-text">"The mock test series and previous years' chemistry/physics solved question banks are remarkably accurate to the actual board patterns. Highly recommended application!"</p>
+                            <footer class="testimonial-author">
+                                <cite class="author-name">Srishti Kumari</cite>
+                                <span class="author-info">Rank 4, GP Muzaffarpur (Electrical Eng.)</span>
+                            </footer>
+                        </blockquote>
+                        <blockquote class="card testimonial-card">
+                            <p class="testimonial-text">"PWA offline access is brilliant. In remote villages where connectivity is problematic, downloading notes of Power Electronics beforehand changed the way we studied."</p>
+                            <footer class="testimonial-author">
+                                <cite class="author-name">Nitin Kumar</cite>
+                                <span class="author-info">Topper, New GP Patna-13 (ECE)</span>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </section>
+
+                <!-- Dynamic FAQ Section -->
+                <section class="section-container bg-offset" id="faq" aria-labelledby="faq-heading">
+                    <div class="container">
+                        <div class="section-header text-center">
+                            <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+                            <p class="section-subtitle">Have queries about courses, notes, or operations? Check out common responses.</p>
+                        </div>
+                        <div class="faq-accordion-wrapper max-width-md mx-auto">
+                            <!-- FAQ Item 1 -->
+                            <details class="faq-item" open>
+                                <summary class="faq-question">Are the study materials aligned with the new SBTE Bihar syllabus?</summary>
+                                <div class="faq-answer">
+                                    <p>Yes, all study materials, courses, PYQs, and practice mock test sets are strictly engineered on the contemporary State Board of Technical Education, Bihar syllabus structure.</p>
+                                </div>
+                            </details>
+                            <!-- FAQ Item 2 -->
+                            <details class="faq-item">
+                                <summary class="faq-question">Can I access downloaded study notes and solved papers offline?</summary>
+                                <div class="faq-answer">
+                                    <p>Yes, Polytechnic Hub is programmed as a fully operational Progressive Web Application (PWA). Once pages and download resources are cached online, you can access them anytime without network dependencies.</p>
+                                </div>
+                            </details>
+                            <!-- FAQ Item 3 -->
+                            <details class="faq-item">
+                                <summary class="faq-question">Is there a cost involved for downloading files and courses?</summary>
+                                <div class="faq-answer">
+                                    <p>Over 70% of resources, historical exam solution PDF matrices, branch syllabi, and introductory lecture videos are entirely free. Advanced mentor sessions require affordable batch admissions.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <!-- Footer Dynamic Component Placeholder -->
+            <div id="footer-placeholder"></div>
+        </div>
+    </div>
+
+    <!-- Progressive Web App Premium Installation Notification Banner -->
+    <section id="pwa-install-banner" class="pwa-install-banner hidden-banner" aria-live="polite" role="status">
+        <div class="pwa-banner-content flex-row align-center justify-between">
+            <div class="pwa-banner-text flex-row align-center">
+                <div class="pwa-app-logo">
+                    <!-- Standard PWA SVG Mini-Logo -->
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#4f46e5"/>
+                        <path d="M12 28V12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12ZM16 24H20C22.2091 24 24 22.2091 24 20C24 17.7909 22.2091 16 20 16H16V24Z" fill="white"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="pwa-title">Install Polytechnic Hub App</h4>
+                    <p class="pwa-subtitle">Get lightning-fast offline access, real-time push notices, and save storage size.</p>
+                </div>
+            </div>
+            <div class="pwa-banner-actions flex-row">
+                <button type="button" class="btn btn-secondary btn-sm" id="pwa-dismiss-btn">Not Now</button>
+                <button type="button" class="btn btn-primary btn-sm" id="pwa-install-btn">Install App</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Authorization Modal -->
+    <div id="welcome-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="welcome-modal-title">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="welcome-modal-title" class="modal-title">Welcome to Polytechnic Hub</h2>
+                <button type="button" class="modal-close" id="close-welcome-modal" aria-label="Close welcome modal">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="welcome-modal-art margin-bottom-md">
+                    <!-- High quality structural SVG of Shield Lock -->
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="40" fill="#e0e7ff"/>
+                        <path d="M40 22C30.5 24 26 28 26 28V44C26 53.5 35.5 58 40 60C44.5 58 54 53.5 54 44V28C54 28 49.5 24 40 22Z" fill="var(--primary-color, #4f46e5)"/>
+                        <path d="M40 33V43M40 43C41.6569 43 43 41.6569 43 40C43 38.3431 41.6569 37 40 37C38.3431 37 37 38.3431 37 40C37 41.6569 38.3431 43 40 43Z" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p class="modal-text">Join thousands of students and unlock instant access to premium handwritten notes, SBTE Bihar course modules, exam updates, solved past papers, and competitive live mock tests.</p>
+            </div>
+            <div class="modal-footer flex-col gap-sm">
+                <a href="pages/auth/login.html" class="btn btn-primary btn-full text-center" id="welcome-modal-login">Login with Credentials</a>
+                <a href="pages/auth/register.html" class="btn btn-outline btn-full text-center" id="welcome-modal-register">Register New Student Account</a>
+                <button type="button" class="btn btn-link text-center" id="welcome-modal-guest">Continue as Guest</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Loading Pipeline (Strict Order of Orchestration) -->
+    <script src="js/helper.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/supabase.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/component-loader.js" defer></script>
+    <script src="js/router.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/pwa.js" defer></script>
+    <script src="js/service-worker-register.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/toast.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/courses.js" defer></script>
+    <script src="js/tests.js" defer></script>
+    <script src="js/downloads.js" defer></script>
+    <script src="js/bookmarks.js" defer></script>
+    <script src="js/profile.js" defer></script>
+    <script src="js/notifications.js" defer></script>
+    <script src="js/sidebar.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/banner.js" defer></script>
+    <script src="js/analytics.js" defer></script>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
