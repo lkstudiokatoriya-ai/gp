@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Courses | Polytechnic Hub Admin</title>
+
+    <meta name="description"
+          content="Admin panel for managing all courses">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/tables.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <main id="admin-courses-page">
+
+        <!-- Header -->
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>
+
+                    Manage Courses
+
+                </h1>
+
+                <p>
+
+                    Add, edit, publish and manage all Polytechnic Hub courses.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Statistics -->
+
+        <section class="course-statistics">
+
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <h2 id="totalCourses">0</h2>
+                        <p>Total Courses</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="paidCourses">0</h2>
+                        <p>Paid Courses</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="freeCourses">0</h2>
+                        <p>Free Courses</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="draftCourses">0</h2>
+                        <p>Draft Courses</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="course-search">
+
+            <div class="container">
+
+                <input type="search"
+                       id="courseSearch"
+                       placeholder="Search Courses">
+
+            </div>
+
+        </section>
+
+        <!-- Filter -->
+
+        <section class="course-filter">
+
+            <div class="container">
+
+                <select id="courseCategory">
+
+                    <option value="">All Categories</option>
+                    <option value="paid">Paid Courses</option>
+                    <option value="free">Free Courses</option>
+                    <option value="demo">Demo Classes</option>
+                    <option value="live">Live Classes</option>
+                    <option value="recorded">Recorded Classes</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+        <!-- Course Table -->
+
+        <section class="course-table">
+
+            <div class="container">
+
+                <h2>
+
+                    Course List
+
+                </h2>
+
+                <div id="courseTableContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Actions -->
+
+        <section class="course-actions">
+
+            <div class="container">
+
+                <button id="addCourseButton">
+
+                    Add Course
+
+                </button>
+
+                <button id="importCourseButton">
+
+                    Import Courses
+
+                </button>
+
+                <button id="exportCourseButton">
+
+                    Export Courses
+
+                </button>
+
+                <button id="deleteCourseButton">
+
+                    Delete Selected
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../../js/admin-courses.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
