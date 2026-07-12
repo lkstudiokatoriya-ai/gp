@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Settings | Polytechnic Hub Admin</title>
+
+    <meta name="description"
+          content="Admin account settings and security">
+
+    <link rel="manifest" href="../../manifest.json">
+
+    <link rel="icon" href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<main id="admin-settings-page">
+
+    <!-- Header -->
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1>
+
+                Admin Settings
+
+            </h1>
+
+            <p>
+
+                Manage administrator account, security and application settings.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Admin Profile -->
+
+    <section class="settings-card">
+
+        <div class="container">
+
+            <h2>
+
+                Administrator Profile
+
+            </h2>
+
+            <input type="text"
+                   id="adminName"
+                   placeholder="Administrator Name">
+
+            <input type="email"
+                   id="adminEmail"
+                   placeholder="Admin Email">
+
+            <input type="tel"
+                   id="adminMobile"
+                   value="9973532153"
+                   readonly>
+
+            <button id="updateProfile">
+
+                Update Profile
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Change Password -->
+
+    <section class="settings-card">
+
+        <div class="container">
+
+            <h2>
+
+                Change Password
+
+            </h2>
+
+            <input type="password"
+                   id="currentPassword"
+                   placeholder="Current Password">
+
+            <input type="password"
+                   id="newPassword"
+                   placeholder="New Password">
+
+            <input type="password"
+                   id="confirmPassword"
+                   placeholder="Confirm New Password">
+
+            <button id="changePassword">
+
+                Change Password
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Mobile Verification -->
+
+    <section class="settings-card">
+
+        <div class="container">
+
+            <h2>
+
+                Mobile Verification
+
+            </h2>
+
+            <input type="tel"
+                   id="verifyMobile"
+                   value="9973532153"
+                   readonly>
+
+            <button id="sendOtpButton">
+
+                Send OTP
+
+            </button>
+
+            <input type="text"
+                   id="otpCode"
+                   maxlength="6"
+                   placeholder="Enter 6-digit OTP">
+
+            <button id="verifyOtpButton">
+
+                Verify OTP
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Security -->
+
+    <section class="settings-card">
+
+        <div class="container">
+
+            <h2>
+
+                Security Settings
+
+            </h2>
+
+            <label>
+                <input type="checkbox" id="twoFactor">
+                Enable Two-Factor Authentication
+            </label>
+
+            <br><br>
+
+            <label>
+                <input type="checkbox" id="rememberDevice">
+                Remember Trusted Device
+            </label>
+
+            <br><br>
+
+            <label>
+                <input type="checkbox" id="loginAlert" checked>
+                Login Alert Notification
+            </label>
+
+            <br><br>
+
+            <label>
+                <input type="checkbox" id="sessionTimeout" checked>
+                Auto Logout After Inactivity
+            </label>
+
+        </div>
+
+    </section>
+
+    <!-- Application Settings -->
+
+    <section class="settings-card">
+
+        <div class="container">
+
+            <h2>
+
+                Application Settings
+
+            </h2>
+
+            <label>
+                <input type="checkbox" checked>
+                Maintenance Mode
+            </label>
+
+            <br><br>
+
+            <label>
+                <input type="checkbox" checked>
+                Push Notifications
+            </label>
+
+            <br><br>
+
+            <label>
+                <input type="checkbox">
+                Debug Mode
+            </label>
+
+            <br><br>
+
+            <label>
+                <input type="checkbox" checked>
+                Backup Database Daily
+            </label>
+
+        </div>
+
+    </section>
+
+    <!-- Save -->
+
+    <section class="settings-card">
+
+        <div class="container">
+
+            <button id="saveAdminSettings">
+
+                Save All Settings
+
+            </button>
+
+            <button id="logoutAdmin">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="../../js/admin-settings.js"></script>
+<script src="../../js/app.js"></script>
+
+</body>
+
+                  </html>
