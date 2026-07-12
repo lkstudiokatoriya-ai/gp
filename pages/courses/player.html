@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Course Player | Polytechnic Hub</title>
+
+    <meta name="description"
+          content="Watch your purchased course videos on Polytechnic Hub">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="../../css/reset.css">
+
+    <link rel="stylesheet"
+          href="../../css/variables.css">
+
+    <link rel="stylesheet"
+          href="../../css/typography.css">
+
+    <link rel="stylesheet"
+          href="../../css/layout.css">
+
+    <link rel="stylesheet"
+          href="../../css/header.css">
+
+    <link rel="stylesheet"
+          href="../../css/sidebar.css">
+
+    <link rel="stylesheet"
+          href="../../css/cards.css">
+
+    <link rel="stylesheet"
+          href="../../css/buttons.css">
+
+    <link rel="stylesheet"
+          href="../../css/forms.css">
+
+    <link rel="stylesheet"
+          href="../../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header id="header-container"></header>
+
+    <!-- Sidebar -->
+
+    <aside id="sidebar-container"></aside>
+
+    <main id="course-player-page">
+
+        <!-- Video Player -->
+
+        <section class="player-section">
+
+            <div class="container">
+
+                <video id="coursePlayer"
+                       controls
+                       controlsList="nodownload"
+                       playsinline>
+
+                    Your browser does not support HTML5 video.
+
+                </video>
+
+            </div>
+
+        </section>
+
+        <!-- Video Details -->
+
+        <section class="video-details">
+
+            <div class="container">
+
+                <h1 id="videoTitle">
+
+                    Video Title
+
+                </h1>
+
+                <p id="videoDescription">
+
+                    Video description will appear here.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Course Progress -->
+
+        <section class="course-progress">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Course Progress
+
+                    </h2>
+
+                </div>
+
+                <progress id="courseProgress"
+                          value="0"
+                          max="100">
+
+                </progress>
+
+                <p id="progressText">
+
+                    0% Completed
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Playlist -->
+
+        <section class="playlist-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Course Playlist
+
+                    </h2>
+
+                </div>
+
+                <div id="playlistContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Notes -->
+
+        <section class="notes-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Class Notes
+
+                    </h2>
+
+                </div>
+
+                <div id="notesContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Attachments -->
+
+        <section class="attachments-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Downloads
+
+                    </h2>
+
+                </div>
+
+                <div id="attachmentContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Discussion -->
+
+        <section class="discussion-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Discussion
+
+                    </h2>
+
+                </div>
+
+                <div id="discussionContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+
+    <nav id="bottom-nav-container"></nav>
+
+    <!-- Footer -->
+
+    <footer id="footer-container"></footer>
+
+    <script src="../../js/component-loader.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/player.js"></script>
+    <script src="../../js/courses.js"></script>
+    <script src="../../js/progress.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+      </html>
