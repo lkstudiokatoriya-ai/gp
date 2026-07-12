@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Certificates | Polytechnic Hub</title>
+
+    <meta name="description"
+          content="View and download your earned certificates from Polytechnic Hub">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="../../css/reset.css">
+
+    <link rel="stylesheet"
+          href="../../css/variables.css">
+
+    <link rel="stylesheet"
+          href="../../css/typography.css">
+
+    <link rel="stylesheet"
+          href="../../css/layout.css">
+
+    <link rel="stylesheet"
+          href="../../css/header.css">
+
+    <link rel="stylesheet"
+          href="../../css/sidebar.css">
+
+    <link rel="stylesheet"
+          href="../../css/cards.css">
+
+    <link rel="stylesheet"
+          href="../../css/buttons.css">
+
+    <link rel="stylesheet"
+          href="../../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header id="header-container"></header>
+
+    <!-- Sidebar -->
+
+    <aside id="sidebar-container"></aside>
+
+    <main id="certificates-page">
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>
+
+                    My Certificates
+
+                </h1>
+
+                <p>
+
+                    View, verify and download your course completion certificates.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Summary -->
+
+        <section class="certificate-summary">
+
+            <div class="container">
+
+                <div class="summary-card">
+
+                    <div class="summary-item">
+
+                        <h3 id="totalCertificates">
+
+                            0
+
+                        </h3>
+
+                        <p>
+
+                            Total Certificates
+
+                        </p>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <h3 id="verifiedCertificates">
+
+                            0
+
+                        </h3>
+
+                        <p>
+
+                            Verified
+
+                        </p>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <h3 id="pendingCertificates">
+
+                            0
+
+                        </h3>
+
+                        <p>
+
+                            Pending
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Certificate List -->
+
+        <section class="certificate-list">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Earned Certificates
+
+                    </h2>
+
+                </div>
+
+                <div id="certificateContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Verification -->
+
+        <section class="certificate-verification">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Verify Certificate
+
+                    </h2>
+
+                </div>
+
+                <form id="certificateVerificationForm">
+
+                    <div class="form-group">
+
+                        <label for="certificateId">
+
+                            Certificate ID
+
+                        </label>
+
+                        <input type="text"
+                               id="certificateId"
+                               name="certificateId"
+                               placeholder="Enter Certificate ID">
+
+                    </div>
+
+                    <button type="submit">
+
+                        Verify Certificate
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+
+    <nav id="bottom-nav-container"></nav>
+
+    <!-- Footer -->
+
+    <footer id="footer-container"></footer>
+
+    <script src="../../js/component-loader.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/profile.js"></script>
+    <script src="../../js/certificates.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
