@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Tests | Polytechnic Hub Admin</title>
+
+    <meta name="description"
+          content="Admin panel to create and manage mock tests, quizzes and examinations">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/tables.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <main id="admin-tests-page">
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>
+
+                    Manage Tests
+
+                </h1>
+
+                <p>
+
+                    Create, edit and manage online tests, quizzes and examinations.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Statistics -->
+
+        <section class="test-statistics">
+
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <h2 id="totalTests">0</h2>
+                        <p>Total Tests</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="activeTests">0</h2>
+                        <p>Active Tests</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="draftTests">0</h2>
+                        <p>Draft Tests</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="attemptsToday">0</h2>
+                        <p>Today's Attempts</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="test-search">
+
+            <div class="container">
+
+                <input type="search"
+                       id="testSearch"
+                       placeholder="Search Test">
+
+            </div>
+
+        </section>
+
+        <!-- Filters -->
+
+        <section class="test-filter">
+
+            <div class="container">
+
+                <select id="testType">
+
+                    <option value="">All Tests</option>
+                    <option value="mock">Mock Test</option>
+                    <option value="quiz">Quiz</option>
+                    <option value="practice">Practice Test</option>
+                    <option value="paid">Paid Test</option>
+                    <option value="free">Free Test</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+        <!-- Test Table -->
+
+        <section class="test-table">
+
+            <div class="container">
+
+                <h2>
+
+                    Test List
+
+                </h2>
+
+                <div id="testTableContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Actions -->
+
+        <section class="test-actions">
+
+            <div class="container">
+
+                <button id="addTestButton">
+
+                    Create Test
+
+                </button>
+
+                <button id="importTestButton">
+
+                    Import Tests
+
+                </button>
+
+                <button id="exportTestButton">
+
+                    Export Tests
+
+                </button>
+
+                <button id="deleteTestButton">
+
+                    Delete Selected
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../../js/admin-tests.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
