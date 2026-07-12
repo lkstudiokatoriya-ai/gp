@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Banners | Polytechnic Hub Admin</title>
+
+    <meta name="description"
+          content="Admin panel to manage homepage banners, sliders and promotional images">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/tables.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <main id="admin-banners-page">
+
+        <!-- Header -->
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>
+
+                    Manage Banners
+
+                </h1>
+
+                <p>
+
+                    Upload, edit and organize homepage banners and promotional sliders.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Statistics -->
+
+        <section class="banner-statistics">
+
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <h2 id="totalBanners">0</h2>
+                        <p>Total Banners</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="activeBanners">0</h2>
+                        <p>Active</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="inactiveBanners">0</h2>
+                        <p>Inactive</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="sliderCount">0</h2>
+                        <p>Slider Images</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Upload Banner -->
+
+        <section class="banner-upload">
+
+            <div class="container">
+
+                <h2>
+
+                    Upload Banner
+
+                </h2>
+
+                <form id="bannerForm">
+
+                    <input type="text"
+                           id="bannerTitle"
+                           placeholder="Banner Title"
+                           required>
+
+                    <input type="file"
+                           id="bannerImage"
+                           accept="image/*"
+                           required>
+
+                    <input type="url"
+                           id="bannerLink"
+                           placeholder="Redirect URL (Optional)">
+
+                    <select id="bannerStatus">
+
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+
+                    </select>
+
+                    <button type="submit">
+
+                        Upload Banner
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- Banner List -->
+
+        <section class="banner-list">
+
+            <div class="container">
+
+                <h2>
+
+                    Banner Gallery
+
+                </h2>
+
+                <div id="bannerContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Actions -->
+
+        <section class="banner-actions">
+
+            <div class="container">
+
+                <button id="refreshBannerButton">
+
+                    Refresh
+
+                </button>
+
+                <button id="exportBannerButton">
+
+                    Export
+
+                </button>
+
+                <button id="deleteBannerButton">
+
+                    Delete Selected
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../../js/admin-banners.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
