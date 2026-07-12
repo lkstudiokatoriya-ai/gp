@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Students | Polytechnic Hub Admin</title>
+
+    <meta name="description"
+          content="Admin panel to manage Polytechnic Hub students">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/tables.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <main id="admin-students-page">
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>
+
+                    Manage Students
+
+                </h1>
+
+                <p>
+
+                    View, search and manage all registered students.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Statistics -->
+
+        <section class="student-statistics">
+
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <h2 id="totalStudents">0</h2>
+                        <p>Total Students</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="activeStudents">0</h2>
+                        <p>Active Students</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="newStudents">0</h2>
+                        <p>New Today</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="premiumStudents">0</h2>
+                        <p>Premium Users</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="student-search">
+
+            <div class="container">
+
+                <input type="search"
+                       id="studentSearch"
+                       placeholder="Search by Name, Mobile or Email">
+
+            </div>
+
+        </section>
+
+        <!-- Filters -->
+
+        <section class="student-filters">
+
+            <div class="container">
+
+                <select id="studentStatus">
+
+                    <option value="">All Students</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                    <option value="premium">Premium</option>
+                    <option value="blocked">Blocked</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+        <!-- Student List -->
+
+        <section class="student-list">
+
+            <div class="container">
+
+                <h2>
+
+                    Registered Students
+
+                </h2>
+
+                <div id="studentTableContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Bulk Actions -->
+
+        <section class="bulk-actions">
+
+            <div class="container">
+
+                <button id="exportStudents">
+
+                    Export Students
+
+                </button>
+
+                <button id="sendNotification">
+
+                    Send Notification
+
+                </button>
+
+                <button id="blockSelected">
+
+                    Block Selected
+
+                </button>
+
+                <button id="deleteSelected">
+
+                    Delete Selected
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../../js/admin-students.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
