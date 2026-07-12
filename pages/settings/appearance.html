@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Appearance Settings | Polytechnic Hub</title>
+
+    <meta name="description"
+          content="Customize the appearance of Polytechnic Hub">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header id="header-container"></header>
+
+    <!-- Sidebar -->
+
+    <aside id="sidebar-container"></aside>
+
+    <main id="appearance-page">
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>
+
+                    Appearance
+
+                </h1>
+
+                <p>
+
+                    Personalize the look and feel of Polytechnic Hub.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Theme -->
+
+        <section class="appearance-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Theme
+
+                    </h2>
+
+                </div>
+
+                <div class="setting-item">
+
+                    <label>
+
+                        <input type="radio"
+                               name="theme"
+                               value="light"
+                               checked>
+
+                        ☀️ Light Mode
+
+                    </label>
+
+                </div>
+
+                <div class="setting-item">
+
+                    <label>
+
+                        <input type="radio"
+                               name="theme"
+                               value="dark">
+
+                        🌙 Dark Mode
+
+                    </label>
+
+                </div>
+
+                <div class="setting-item">
+
+                    <label>
+
+                        <input type="radio"
+                               name="theme"
+                               value="system">
+
+                        📱 System Default
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Font Size -->
+
+        <section class="font-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Font Size
+
+                    </h2>
+
+                </div>
+
+                <select id="fontSize">
+
+                    <option value="small">Small</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+        <!-- Home Layout -->
+
+        <section class="layout-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Home Layout
+
+                    </h2>
+
+                </div>
+
+                <label>
+                    <input type="checkbox" id="compactLayout">
+                    Compact Layout
+                </label>
+
+                <br><br>
+
+                <label>
+                    <input type="checkbox" id="showBanner" checked>
+                    Show Banner
+                </label>
+
+                <br><br>
+
+                <label>
+                    <input type="checkbox" id="showAnimations" checked>
+                    Enable Animations
+                </label>
+
+            </div>
+
+        </section>
+
+        <!-- Save -->
+
+        <section class="save-section">
+
+            <div class="container">
+
+                <button id="saveAppearanceSettings">
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+
+    <nav id="bottom-nav-container"></nav>
+
+    <!-- Footer -->
+
+    <footer id="footer-container"></footer>
+
+    <script src="../../js/component-loader.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/appearance.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+      </html>
