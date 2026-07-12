@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Doubt Center | Polytechnic Hub</title>
+
+    <meta name="description"
+          content="Ask your study doubts and get answers from teachers and students.">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header id="header-container"></header>
+
+    <!-- Sidebar -->
+
+    <aside id="sidebar-container"></aside>
+
+    <main id="doubt-page">
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>
+
+                    Doubt Center
+
+                </h1>
+
+                <p>
+
+                    Ask your academic doubts and receive answers from teachers and the Polytechnic Hub community.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Ask Doubt -->
+
+        <section class="ask-doubt">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Ask a Doubt
+
+                    </h2>
+
+                </div>
+
+                <form id="doubtForm">
+
+                    <input type="text"
+                           id="doubtTitle"
+                           placeholder="Doubt Title"
+                           required>
+
+                    <select id="subject">
+
+                        <option value="">
+
+                            Select Subject
+
+                        </option>
+
+                    </select>
+
+                    <textarea id="doubtDescription"
+                              rows="6"
+                              placeholder="Explain your doubt..."
+                              required></textarea>
+
+                    <input type="file"
+                           id="attachment"
+                           accept="image/*,.pdf">
+
+                    <button type="submit">
+
+                        Submit Doubt
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- My Doubts -->
+
+        <section class="my-doubts">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        My Doubts
+
+                    </h2>
+
+                </div>
+
+                <div id="myDoubtContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Doubts -->
+
+        <section class="recent-doubts">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Recent Doubts
+
+                    </h2>
+
+                </div>
+
+                <div id="recentDoubtContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Solved Doubts -->
+
+        <section class="solved-doubts">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Solved Doubts
+
+                    </h2>
+
+                </div>
+
+                <div id="solvedDoubtContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+
+    <nav id="bottom-nav-container"></nav>
+
+    <!-- Footer -->
+
+    <footer id="footer-container"></footer>
+
+    <script src="../../js/component-loader.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/doubts.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
