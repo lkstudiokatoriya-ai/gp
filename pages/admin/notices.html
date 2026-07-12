@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Notices | Polytechnic Hub Admin</title>
+
+    <meta name="description"
+          content="Admin panel to create and manage notices, announcements and updates">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/tables.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <main id="admin-notices-page">
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>
+
+                    Manage Notices
+
+                </h1>
+
+                <p>
+
+                    Publish and manage notices, announcements and important updates.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Statistics -->
+
+        <section class="notice-statistics">
+
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <h2 id="totalNotices">0</h2>
+                        <p>Total Notices</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="publishedNotices">0</h2>
+                        <p>Published</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="draftNotices">0</h2>
+                        <p>Draft</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="todayNotices">0</h2>
+                        <p>Posted Today</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="notice-search">
+
+            <div class="container">
+
+                <input type="search"
+                       id="noticeSearch"
+                       placeholder="Search Notices">
+
+            </div>
+
+        </section>
+
+        <!-- Notice Table -->
+
+        <section class="notice-table">
+
+            <div class="container">
+
+                <h2>
+
+                    Notice List
+
+                </h2>
+
+                <div id="noticeTableContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Actions -->
+
+        <section class="notice-actions">
+
+            <div class="container">
+
+                <button id="addNoticeButton">
+
+                    Add Notice
+
+                </button>
+
+                <button id="publishNoticeButton">
+
+                    Publish Selected
+
+                </button>
+
+                <button id="editNoticeButton">
+
+                    Edit Notice
+
+                </button>
+
+                <button id="deleteNoticeButton">
+
+                    Delete Selected
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../../js/admin-notices.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
