@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Polytechnic Hub</title>
+
+    <meta name="description"
+          content="Student Registration - Polytechnic Hub">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="../../css/reset.css">
+
+    <link rel="stylesheet"
+          href="../../css/variables.css">
+
+    <link rel="stylesheet"
+          href="../../css/typography.css">
+
+    <link rel="stylesheet"
+          href="../../css/layout.css">
+
+    <link rel="stylesheet"
+          href="../../css/forms.css">
+
+    <link rel="stylesheet"
+          href="../../css/buttons.css">
+
+    <link rel="stylesheet"
+          href="../../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header Component -->
+
+    <header id="header-container"></header>
+
+    <main id="register-page">
+
+        <section class="register-section">
+
+            <div class="register-container">
+
+                <div class="register-logo">
+
+                    <img src="../../assets/logo/logo.png"
+                         alt="Polytechnic Hub">
+
+                </div>
+
+                <h1>
+
+                    Student Registration
+
+                </h1>
+
+                <p>
+
+                    Create your Polytechnic Hub account
+
+                </p>
+
+                <form id="registerForm">
+
+                    <div class="form-group">
+
+                        <label for="studentName">
+
+                            Full Name
+
+                        </label>
+
+                        <input type="text"
+                               id="studentName"
+                               name="studentName"
+                               placeholder="Enter Full Name"
+                               required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="mobileNumber">
+
+                            Mobile Number
+
+                        </label>
+
+                        <input type="tel"
+                               id="mobileNumber"
+                               name="mobileNumber"
+                               maxlength="10"
+                               placeholder="Enter Mobile Number"
+                               required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email">
+
+                            Email Address
+
+                        </label>
+
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter Email Address">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="branch">
+
+                            Branch
+
+                        </label>
+
+                        <select id="branch"
+                                name="branch"
+                                required>
+
+                            <option value="">
+
+                                Select Branch
+
+                            </option>
+
+                            <option>
+
+                                Electrical Engineering
+
+                            </option>
+
+                            <option>
+
+                                Mechanical Engineering
+
+                            </option>
+
+                            <option>
+
+                                Civil Engineering
+
+                            </option>
+
+                            <option>
+
+                                Computer Engineering
+
+                            </option>
+
+                            <option>
+
+                                Electronics Engineering
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="semester">
+
+                            Semester
+
+                        </label>
+
+                        <select id="semester"
+                                name="semester"
+                                required>
+
+                            <option value="">
+
+                                Select Semester
+
+                            </option>
+
+                            <option>1st Semester</option>
+
+                            <option>2nd Semester</option>
+
+                            <option>3rd Semester</option>
+
+                            <option>4th Semester</option>
+
+                            <option>5th Semester</option>
+
+                            <option>6th Semester</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="college">
+
+                            College Name
+
+                        </label>
+
+                        <input type="text"
+                               id="college"
+                               name="college"
+                               placeholder="Enter College Name"
+                               required>
+
+                    </div>
+
+                    <button type="button"
+                            id="sendOtpButton">
+
+                        Send OTP
+
+                    </button>
+
+                    <div class="form-group">
+
+                        <label for="otp">
+
+                            OTP
+
+                        </label>
+
+                        <input type="text"
+                               id="otp"
+                               maxlength="6"
+                               placeholder="Enter OTP">
+
+                    </div>
+
+                    <button type="button"
+                            id="verifyOtpButton">
+
+                        Verify OTP
+
+                    </button>
+
+                    <button type="button"
+                            id="resendOtpButton">
+
+                        Resend OTP
+
+                    </button>
+
+                </form>
+
+                <div class="register-footer">
+
+                    <p>
+
+                        Already have an account?
+
+                        <a href="login.html">
+
+                            Login
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer Component -->
+
+    <footer id="footer-container"></footer>
+
+    <script src="../../js/component-loader.js"></script>
+
+    <script src="../../js/supabase.js"></script>
+
+    <script src="../../js/auth.js"></script>
+
+    <script src="../../js/app.js"></script>
+
+</body>
+
+                              </html>
