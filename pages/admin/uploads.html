@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>File Upload Manager | Polytechnic Hub Admin</title>
+
+    <meta name="description"
+          content="Admin panel to upload and manage files, PDFs, videos, images and study materials">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/tables.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <main id="admin-uploads-page">
+
+        <!-- Header -->
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>
+
+                    Upload Manager
+
+                </h1>
+
+                <p>
+
+                    Upload and manage study materials, videos, PDFs, images and other resources.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Upload Statistics -->
+
+        <section class="upload-statistics">
+
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <h2 id="totalFiles">0</h2>
+                        <p>Total Files</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="totalVideos">0</h2>
+                        <p>Videos</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="totalPDFs">0</h2>
+                        <p>PDF Files</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="storageUsed">0 GB</h2>
+                        <p>Storage Used</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Upload Form -->
+
+        <section class="upload-form">
+
+            <div class="container">
+
+                <h2>
+
+                    Upload File
+
+                </h2>
+
+                <form id="uploadForm">
+
+                    <input type="text"
+                           id="fileTitle"
+                           placeholder="File Title"
+                           required>
+
+                    <select id="fileCategory"
+                            required>
+
+                        <option value="">Select Category</option>
+                        <option value="notes">Notes</option>
+                        <option value="pdf">PDF</option>
+                        <option value="video">Video</option>
+                        <option value="image">Image</option>
+                        <option value="pyq">PYQ</option>
+                        <option value="book">Book</option>
+                        <option value="syllabus">Syllabus</option>
+                        <option value="other">Other</option>
+
+                    </select>
+
+                    <input type="file"
+                           id="uploadFile"
+                           required>
+
+                    <textarea id="fileDescription"
+                              rows="4"
+                              placeholder="File Description"></textarea>
+
+                    <button type="submit">
+
+                        Upload File
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- File Manager -->
+
+        <section class="file-manager">
+
+            <div class="container">
+
+                <h2>
+
+                    Uploaded Files
+
+                </h2>
+
+                <div id="fileManagerContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Actions -->
+
+        <section class="upload-actions">
+
+            <div class="container">
+
+                <button id="refreshFilesButton">
+
+                    Refresh
+
+                </button>
+
+                <button id="exportFilesButton">
+
+                    Export List
+
+                </button>
+
+                <button id="deleteFilesButton">
+
+                    Delete Selected
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../../js/admin-uploads.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
