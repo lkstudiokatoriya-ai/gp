@@ -1,0 +1,133 @@
+/* ==========================================================
+   Polytechnic Hub
+   CSS Variables
+   File : css/variables.css
+========================================================== */
+
+:root{
+
+    /* ---------- Brand Colors ---------- */
+
+    --primary:#0d6efd;
+    --primary-dark:#084298;
+    --primary-light:#66b2ff;
+
+    --secondary:#198754;
+    --secondary-dark:#146c43;
+
+    --success:#198754;
+    --danger:#dc3545;
+    --warning:#ffc107;
+    --info:#0dcaf0;
+
+    /* ---------- Neutral Colors ---------- */
+
+    --white:#ffffff;
+    --black:#000000;
+
+    --light:#f8f9fa;
+    --lighter:#fcfcfc;
+
+    --dark:#212529;
+    --gray:#6c757d;
+    --gray-light:#adb5bd;
+
+    --background:#f5f7fb;
+    --surface:#ffffff;
+
+    --border:#e5e7eb;
+    --divider:#dee2e6;
+
+    /* ---------- Text Colors ---------- */
+
+    --text-primary:#212529;
+    --text-secondary:#6c757d;
+    --text-light:#ffffff;
+
+    /* ---------- Fonts ---------- */
+
+    --font-family:
+    "Poppins",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    --font-xs:12px;
+    --font-sm:14px;
+    --font-md:16px;
+    --font-lg:18px;
+    --font-xl:22px;
+    --font-2xl:28px;
+    --font-3xl:36px;
+
+    /* ---------- Font Weight ---------- */
+
+    --fw-light:300;
+    --fw-normal:400;
+    --fw-medium:500;
+    --fw-semibold:600;
+    --fw-bold:700;
+
+    /* ---------- Spacing ---------- */
+
+    --space-1:4px;
+    --space-2:8px;
+    --space-3:12px;
+    --space-4:16px;
+    --space-5:20px;
+    --space-6:24px;
+    --space-7:32px;
+    --space-8:40px;
+    --space-9:48px;
+
+    /* ---------- Border Radius ---------- */
+
+    --radius-xs:4px;
+    --radius-sm:8px;
+    --radius-md:12px;
+    --radius-lg:18px;
+    --radius-xl:24px;
+    --radius-round:50%;
+
+    /* ---------- Shadows ---------- */
+
+    --shadow-sm:
+    0 2px 8px rgba(0,0,0,.08);
+
+    --shadow-md:
+    0 6px 18px rgba(0,0,0,.12);
+
+    --shadow-lg:
+    0 12px 30px rgba(0,0,0,.16);
+
+    /* ---------- Transition ---------- */
+
+    --transition-fast:.2s ease;
+
+    --transition:.3s ease;
+
+    --transition-slow:.5s ease;
+
+    /* ---------- Layout ---------- */
+
+    --header-height:65px;
+
+    --bottom-nav-height:70px;
+
+    --sidebar-width:280px;
+
+    --container-width:1300px;
+
+    /* ---------- Z-Index ---------- */
+
+    --z-header:1000;
+
+    --z-sidebar:1100;
+
+    --z-modal:1200;
+
+    --z-toast:1300;
+
+    --z-loader:1400;
+
+}
