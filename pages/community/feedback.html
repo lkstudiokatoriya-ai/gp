@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback | Polytechnic Hub</title>
+
+    <meta name="description"
+          content="Share your feedback, suggestions and report issues to improve Polytechnic Hub.">
+
+    <link rel="manifest"
+          href="../../manifest.json">
+
+    <link rel="icon"
+          href="../../assets/logo/logo.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header id="header-container"></header>
+
+    <!-- Sidebar -->
+
+    <aside id="sidebar-container"></aside>
+
+    <main id="feedback-page">
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <h1>
+
+                    Feedback
+
+                </h1>
+
+                <p>
+
+                    Help us improve Polytechnic Hub by sharing your feedback and suggestions.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Feedback Form -->
+
+        <section class="feedback-form-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Send Your Feedback
+
+                    </h2>
+
+                </div>
+
+                <form id="feedbackForm">
+
+                    <div class="form-group">
+
+                        <label for="feedbackType">
+
+                            Feedback Type
+
+                        </label>
+
+                        <select id="feedbackType"
+                                name="feedbackType"
+                                required>
+
+                            <option value="">Select Type</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="other">Other</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="feedbackSubject">
+
+                            Subject
+
+                        </label>
+
+                        <input type="text"
+                               id="feedbackSubject"
+                               name="feedbackSubject"
+                               placeholder="Enter Subject"
+                               required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="feedbackMessage">
+
+                            Message
+
+                        </label>
+
+                        <textarea id="feedbackMessage"
+                                  name="feedbackMessage"
+                                  rows="6"
+                                  placeholder="Write your feedback..."
+                                  required></textarea>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="feedbackAttachment">
+
+                            Attachment (Optional)
+
+                        </label>
+
+                        <input type="file"
+                               id="feedbackAttachment"
+                               accept="image/*,.pdf">
+
+                    </div>
+
+                    <button type="submit"
+                            id="submitFeedbackButton">
+
+                        Submit Feedback
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- FAQ -->
+
+        <section class="feedback-faq">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Frequently Asked Questions
+
+                    </h2>
+
+                </div>
+
+                <div id="faqContainer">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+
+    <nav id="bottom-nav-container"></nav>
+
+    <!-- Footer -->
+
+    <footer id="footer-container"></footer>
+
+    <script src="../../js/component-loader.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/feedback.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
