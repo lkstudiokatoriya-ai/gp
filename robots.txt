@@ -1,0 +1,14 @@
+# File: robots.txt
+
+User-agent: *
+
+Allow: /
+
+Disallow: /pages/admin/
+Disallow: /database/
+Disallow: /backups/
+Disallow: /tests/
+Disallow: /.git/
+Disallow: /.github/
+
+Sitemap: https://polytechnichub.netlify.app/sitemap.xml
