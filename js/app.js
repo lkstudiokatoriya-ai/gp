@@ -1,602 +1,675 @@
 /* ==========================================================
    Polytechnic Hub
    File : js/app.js
-   Part 1/2
-========================================================== */
+   Part : 1
+   ========================================================== */
 
 "use strict";
 
-/* ==========================================================
+/* ===========================================
    Global Variables
-========================================================== */
+=========================================== */
 
-const App = {
+let student = {};
 
-    name: "Polytechnic Hub",
+let attendance = {};
 
-    version: "1.0.0",
+let currentLocation = null;
 
-    isOnline: navigator.onLine,
+let selfieImage = null;
 
-    currentTheme: localStorage.getItem("theme") || "light"
+let collegeImage = null;
 
-};
+let frontStream = null;
 
-/* ==========================================================
-   DOM Ready
-========================================================== */
+let backStream = null;
 
-document.addEventListener("DOMContentLoaded", () => {
+let locationVerified = false;
 
-    initializeApp();
+let selfieVerified = false;
 
-});
+let collegeVerified = false;
 
-/* ==========================================================
-   Initialize Application
-========================================================== */
 
-function initializeApp() {
+/* ===========================================
+   App Initialize
+=========================================== */
 
-    initializeLoader();
+document.addEventListener("DOMContentLoaded", initApp);
 
-    initializeTheme();
+function initApp() {
 
-    initializeSidebar();
+    loadStudent();
 
-    initializeSearch();
+    bindEvents();
 
-    initializeNotification();
-
-    initializePopup();
-
-    initializeBannerSlider();
-
-    initializeScrollButton();
-
-    initializeNetworkStatus();
-
-    initializeTooltips();
-
-    initializeLazyImages();
-
-    console.log(App.name + " Started");
+    console.log("Application Started");
 
 }
 
-/* ==========================================================
-   Loader
-========================================================== */
 
-function initializeLoader() {
+/* ===========================================
+   Bind Events
+=========================================== */
 
-    const loader = document.getElementById("appLoader");
+function bindEvents() {
 
-    if (!loader) return;
+    const registerBtn = document.getElementById("registerBtn");
 
-    let progress = 0;
+    if (registerBtn) {
 
-    const bar = document.getElementById("loaderProgressBar");
-
-    const percentage = document.getElementById("loaderPercentage");
-
-    const timer = setInterval(() => {
-
-        progress++;
-
-        if (bar) {
-
-            bar.style.width = progress + "%";
-
-        }
-
-        if (percentage) {
-
-            percentage.textContent = progress + "%";
-
-        }
-
-        if (progress >= 100) {
-
-            clearInterval(timer);
-
-            loader.style.display = "none";
-
-        }
-
-    }, 15);
-
-}
-
-/* ==========================================================
-   Theme
-========================================================== */
-
-function initializeTheme() {
-
-    document.body.setAttribute(
-
-        "data-theme",
-
-        App.currentTheme
-
-    );
-
-    const button = document.getElementById("themeButton");
-
-    if (!button) return;
-
-    button.addEventListener("click", toggleTheme);
-
-}
-
-function toggleTheme() {
-
-    App.currentTheme =
-
-        App.currentTheme === "light"
-
-        ? "dark"
-
-        : "light";
-
-    document.body.setAttribute(
-
-        "data-theme",
-
-        App.currentTheme
-
-    );
-
-    localStorage.setItem(
-
-        "theme",
-
-        App.currentTheme
-
-    );
-
-}
-
-/* ==========================================================
-   Sidebar
-========================================================== */
-
-function initializeSidebar() {
-
-    const sidebar = document.getElementById("sidebar");
-
-    const menu = document.getElementById("menuButton");
-
-    const close = document.getElementById("closeSidebar");
-
-    const overlay = document.getElementById("sidebarOverlay");
-
-    if (menu && sidebar) {
-
-        menu.onclick = () => {
-
-            sidebar.classList.add("active");
-
-            if (overlay) {
-
-                overlay.style.display = "block";
-
-            }
-
-        };
-
-    }
-
-    if (close) {
-
-        close.onclick = closeSidebar;
-
-    }
-
-    if (overlay) {
-
-        overlay.onclick = closeSidebar;
+        registerBtn.addEventListener("click", saveStudent);
 
     }
 
 }
 
-function closeSidebar() {
 
-    const sidebar = document.getElementById("sidebar");
+/* ===========================================
+   Save Student
+=========================================== */
 
-    const overlay = document.getElementById("sidebarOverlay");
+function saveStudent() {
 
-    if (sidebar) {
+    student = {
 
-        sidebar.classList.remove("active");
+        name: document.getElementById("studentName").value.trim(),
 
-    }
+        roll: document.getElementById("rollNumber").value.trim(),
 
-    if (overlay) {
+        registration: document.getElementById("registrationNumber").value.trim(),
 
-        overlay.style.display = "none";
+        semester: document.getElementById("semester").value,
 
-    }
+        branch: document.getElementById("branch").value,
 
-}
-
-/* ==========================================================
-   Search
-========================================================== */
-
-function initializeSearch() {
-
-    const form = document.getElementById("searchForm");
-
-    if (!form) return;
-
-    form.addEventListener("submit", searchContent);
-
-}
-
-function searchContent(event) {
-
-    event.preventDefault();
-
-    const input = document.getElementById("searchInput");
-
-    if (!input) return;
-
-    const keyword = input.value.trim();
-
-    if (keyword === "") {
-
-        showToast("warning", "Enter something to search.");
-
-        return;
-
-    }
-
-    console.log("Searching:", keyword);
-
-}
-
-/* ==========================================================
-   Notification
-========================================================== */
-
-function initializeNotification() {
-
-    const button =
-
-        document.getElementById(
-
-            "notificationButton"
-
-        );
-
-    if (!button) return;
-
-    button.onclick = () => {
-
-        const panel =
-
-            document.getElementById(
-
-                "notificationPanel"
-
-            );
-
-        if (panel) {
-
-            panel.classList.toggle("active");
-
-        }
+        college: "Government Polytechnic Banka"
 
     };
 
+    localStorage.setItem(
+
+        "student",
+
+        JSON.stringify(student)
+
+    );
+
+    alert("Registration Successful");
+
 }
-/* ==========================================================
-   Polytechnic Hub
-   File : js/app.js
-   Part 2/2
-========================================================== */
 
-"use strict";
 
-/* ==========================================================
-   Popup
-========================================================== */
+/* ===========================================
+   Load Student
+=========================================== */
 
-function initializePopup() {
+function loadStudent() {
 
-    const popup = document.getElementById("popupContainer");
+    const data = localStorage.getItem("student");
 
-    if (!popup) return;
+    if (!data) return;
 
-    if (localStorage.getItem("hidePopup") === "true") {
+    student = JSON.parse(data);
 
-        popup.style.display = "none";
+}
+
+
+/* ===========================================
+   Check Registration
+=========================================== */
+
+function isRegistered() {
+
+    return (
+
+        student.name &&
+
+        student.roll &&
+
+        student.registration
+
+    );
+
+}
+
+
+/* ===========================================
+   Start Attendance
+=========================================== */
+
+function startAttendance() {
+
+    if (!isRegistered()) {
+
+        alert("Please Register First");
 
         return;
 
     }
 
-    setTimeout(() => {
-
-        popup.style.display = "flex";
-
-    }, 2000);
-
-    const closeButton = document.getElementById("closePopup");
-
-    if (closeButton) {
-
-        closeButton.onclick = closePopup;
-
-    }
+    requestLocation();
 
 }
+/* ===========================================
+   Request Location Permission
+=========================================== */
 
-function closePopup() {
+function requestLocation() {
 
-    const popup = document.getElementById("popupContainer");
+    if (!navigator.geolocation) {
 
-    if (popup) {
+        alert("Location is not supported.");
 
-        popup.style.display = "none";
-
-    }
-
-    const remember = document.getElementById("dontShowPopup");
-
-    if (remember && remember.checked) {
-
-        localStorage.setItem(
-
-            "hidePopup",
-
-            "true"
-
-        );
+        return;
 
     }
 
-}
+    navigator.geolocation.getCurrentPosition(
 
-/* ==========================================================
-   Banner Slider
-========================================================== */
+        locationSuccess,
 
-function initializeBannerSlider() {
+        locationError,
 
-    const slides = document.querySelectorAll(".slide");
-
-    if (!slides.length) return;
-
-    let index = 0;
-
-    setInterval(() => {
-
-        slides[index].classList.remove("active");
-
-        index++;
-
-        if (index >= slides.length) {
-
-            index = 0;
-
+        {
+            enableHighAccuracy: true,
+            timeout: 15000,
+            maximumAge: 0
         }
 
-        slides[index].classList.add("active");
-
-    }, 4000);
+    );
 
 }
 
-/* ==========================================================
-   Scroll Button
-========================================================== */
 
-function initializeScrollButton() {
+/* ===========================================
+   Location Success
+=========================================== */
 
-    window.addEventListener("scroll", () => {
+function locationSuccess(position) {
 
-        const button = document.getElementById("scrollTopButton");
+    currentLocation = {
 
-        if (!button) return;
+        latitude: position.coords.latitude,
 
-        if (window.scrollY > 400) {
+        longitude: position.coords.longitude,
 
-            button.style.display = "flex";
+        accuracy: position.coords.accuracy
 
-        } else {
+    };
 
-            button.style.display = "none";
-
-        }
-
-    });
+    verifyCollegeLocation();
 
 }
 
-/* ==========================================================
-   Network Status
-========================================================== */
 
-function initializeNetworkStatus() {
+/* ===========================================
+   Location Error
+=========================================== */
 
-    window.addEventListener("online", () => {
+function locationError(error) {
 
-        App.isOnline = true;
+    switch (error.code) {
 
-        showToast(
+        case error.PERMISSION_DENIED:
 
-            "success",
+            alert("Location Permission Denied");
 
-            "Internet Connected"
+            break;
 
-        );
+        case error.POSITION_UNAVAILABLE:
 
-    });
+            alert("Location Unavailable");
 
-    window.addEventListener("offline", () => {
+            break;
 
-        App.isOnline = false;
+        case error.TIMEOUT:
 
-        showToast(
+            alert("Location Request Timeout");
 
-            "error",
+            break;
 
-            "You are Offline"
+        default:
 
-        );
+            alert("Unable to Get Location");
 
-    });
+    }
 
 }
 
-/* ==========================================================
-   Lazy Images
-========================================================== */
 
-function initializeLazyImages() {
+/* ===========================================
+   Verify College Location
+=========================================== */
 
-    const images =
+async function verifyCollegeLocation() {
 
-        document.querySelectorAll("img[data-src]");
+    const result = await verifyLocation(
 
-    if (!images.length) return;
+        currentLocation.latitude,
 
-    const observer =
+        currentLocation.longitude
 
-        new IntersectionObserver(entries => {
+    );
 
-            entries.forEach(entry => {
+    if (!result.success) {
 
-                if (entry.isIntersecting) {
+        alert("You are outside Government Polytechnic Banka.");
 
-                    const image = entry.target;
+        return;
 
-                    image.src = image.dataset.src;
+    }
 
-                    image.removeAttribute("data-src");
+    locationVerified = true;
 
-                    observer.unobserve(image);
+    startFrontCamera();
+
+}
+/* ===========================================
+   Start Front Camera
+=========================================== */
+
+async function startFrontCamera() {
+
+    try {
+
+        frontStream = await navigator.mediaDevices.getUserMedia({
+
+            video: {
+
+                facingMode: "user",
+
+                width: { ideal: 1280 },
+
+                height: { ideal: 720 }
+
+            },
+
+            audio: false
+
+        });
+
+        const video = document.getElementById("frontCamera");
+
+        video.srcObject = frontStream;
+
+        video.play();
+
+    } catch (error) {
+
+        alert("Unable to Open Front Camera");
+
+        console.error(error);
+
+    }
+
+}
+
+
+/* ===========================================
+   Capture Selfie
+=========================================== */
+
+function captureSelfie() {
+
+    const video = document.getElementById("frontCamera");
+
+    const canvas = document.getElementById("selfieCanvas");
+
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = video.videoWidth;
+
+    canvas.height = video.videoHeight;
+
+    ctx.drawImage(
+
+        video,
+
+        0,
+
+        0,
+
+        canvas.width,
+
+        canvas.height
+
+    );
+
+    selfieImage = canvas.toDataURL("image/jpeg", 0.95);
+
+    selfieVerified = true;
+
+    stopFrontCamera();
+
+    startBackCamera();
+
+}
+
+
+/* ===========================================
+   Stop Front Camera
+=========================================== */
+
+function stopFrontCamera() {
+
+    if (!frontStream) return;
+
+    frontStream.getTracks().forEach(track => track.stop());
+
+    frontStream = null;
+
+}
+/* ===========================================
+   Start Back Camera
+=========================================== */
+
+async function startBackCamera() {
+
+    try {
+
+        backStream = await navigator.mediaDevices.getUserMedia({
+
+            video: {
+
+                facingMode: {
+
+                    ideal: "environment"
+
+                },
+
+                width: {
+
+                    ideal: 1920
+
+                },
+
+                height: {
+
+                    ideal: 1080
 
                 }
 
-            });
+            },
+
+            audio: false
 
         });
 
-    images.forEach(image => {
+        const video = document.getElementById("backCamera");
 
-        observer.observe(image);
+        video.srcObject = backStream;
 
-    });
+        await video.play();
 
-}
+    } catch (error) {
 
-/* ==========================================================
-   Tooltips
-========================================================== */
+        alert("Unable to Open Back Camera");
 
-function initializeTooltips() {
-
-    const elements =
-
-        document.querySelectorAll("[title]");
-
-    elements.forEach(element => {
-
-        element.addEventListener("mouseenter", () => {
-
-            console.log(
-
-                element.getAttribute("title")
-
-            );
-
-        });
-
-    });
-
-}
-
-/* ==========================================================
-   Toast
-========================================================== */
-
-function showToast(type, message) {
-
-    const toast =
-
-        document.getElementById(
-
-            type + "Toast"
-
-        );
-
-    if (!toast) return;
-
-    const text =
-
-        document.getElementById(
-
-            type + "ToastMessage"
-
-        );
-
-    if (text) {
-
-        text.textContent = message;
+        console.error(error);
 
     }
 
-    toast.style.display = "flex";
+}
 
-    setTimeout(() => {
 
-        toast.style.display = "none";
+/* ===========================================
+   Capture College Photo
+=========================================== */
 
-    }, 3000);
+function captureCollegePhoto() {
+
+    const video = document.getElementById("backCamera");
+
+    const canvas = document.getElementById("collegeCanvas");
+
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = video.videoWidth;
+
+    canvas.height = video.videoHeight;
+
+    ctx.drawImage(
+
+        video,
+
+        0,
+
+        0,
+
+        canvas.width,
+
+        canvas.height
+
+    );
+
+    collegeImage = canvas.toDataURL(
+
+        "image/jpeg",
+
+        0.95
+
+    );
+
+    collegeVerified = true;
+
+    stopBackCamera();
+
+    submitAttendanceData();
 
 }
 
-/* ==========================================================
-   Helpers
-========================================================== */
 
-function $(selector) {
+/* ===========================================
+   Stop Back Camera
+=========================================== */
 
-    return document.querySelector(selector);
+function stopBackCamera() {
+
+    if (!backStream) return;
+
+    backStream.getTracks().forEach(track => track.stop());
+
+    backStream = null;
+
+}
+/* ===========================================
+   Submit Attendance
+=========================================== */
+
+async function submitAttendanceData() {
+
+    if (!locationVerified) {
+
+        alert("Location Verification Required");
+
+        return;
+
+    }
+
+    if (!selfieVerified) {
+
+        alert("Selfie Required");
+
+        return;
+
+    }
+
+    if (!collegeVerified) {
+
+        alert("College Photo Required");
+
+        return;
+
+    }
+
+    attendance = {
+
+        student: student,
+
+        location: currentLocation,
+
+        selfie: selfieImage,
+
+        collegePhoto: collegeImage,
+
+        date: new Date().toLocaleDateString(),
+
+        time: new Date().toLocaleTimeString(),
+
+        timestamp: Date.now()
+
+    };
+
+    const response = await submitAttendance(attendance);
+
+    if (response.success) {
+
+        saveAttendanceHistory(attendance);
+
+        alert("Attendance Submitted Successfully");
+
+    } else {
+
+        alert(response.message || "Attendance Submission Failed");
+
+    }
 
 }
 
-function $$(selector) {
 
-    return document.querySelectorAll(selector);
+/* ===========================================
+   Save Attendance History
+=========================================== */
+
+function saveAttendanceHistory(record) {
+
+    let history = JSON.parse(
+
+        localStorage.getItem("attendanceHistory")
+
+    ) || [];
+
+    history.unshift(record);
+
+    localStorage.setItem(
+
+        "attendanceHistory",
+
+        JSON.stringify(history)
+
+    );
 
 }
 
-function goTo(url) {
 
-    window.location.href = url;
+/* ===========================================
+   Get Attendance History
+=========================================== */
+
+function getAttendanceHistoryLocal() {
+
+    return JSON.parse(
+
+        localStorage.getItem("attendanceHistory")
+
+    ) || [];
+
+}
+/* ===========================================
+   Reset Attendance Session
+=========================================== */
+
+function resetAttendanceSession() {
+
+    currentLocation = null;
+
+    selfieImage = null;
+
+    collegeImage = null;
+
+    locationVerified = false;
+
+    selfieVerified = false;
+
+    collegeVerified = false;
 
 }
 
-function reloadPage() {
+
+/* ===========================================
+   Preview Selfie
+=========================================== */
+
+function previewSelfie() {
+
+    const img = document.getElementById("selfiePreview");
+
+    if (!img || !selfieImage) return;
+
+    img.src = selfieImage;
+
+}
+
+
+/* ===========================================
+   Preview College Photo
+=========================================== */
+
+function previewCollegePhoto() {
+
+    const img = document.getElementById("collegePreview");
+
+    if (!img || !collegeImage) return;
+
+    img.src = collegeImage;
+
+}
+
+
+/* ===========================================
+   Remove Selfie
+=========================================== */
+
+function removeSelfie() {
+
+    selfieImage = null;
+
+    selfieVerified = false;
+
+}
+
+
+/* ===========================================
+   Remove College Photo
+=========================================== */
+
+function removeCollegePhoto() {
+
+    collegeImage = null;
+
+    collegeVerified = false;
+
+}
+
+
+/* ===========================================
+   Logout
+=========================================== */
+
+function logout() {
+
+    localStorage.removeItem("student");
+
+    localStorage.removeItem("attendanceHistory");
 
     location.reload();
 
 }
 
-/* ==========================================================
-   App Ready
-========================================================== */
 
-window.App = App;
+/* ===========================================
+   End of app.js
+=========================================== */
 
-console.log(
-
-    "Polytechnic Hub JavaScript Loaded Successfully"
-
-);
+console.log("app.js Loaded Successfully");
